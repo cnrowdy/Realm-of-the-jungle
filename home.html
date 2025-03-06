@@ -1,45 +1,72 @@
 <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
- <style>
-        body {
-            background-image: url('mobile-back.jpg');
-            background-size: cover; /* This makes the image cover the entire page */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-size: contain;
-            overflow-x: hidden;
-        }
-	
-.pixel-font {
-	
-	font-family: 'Common Pixel', sans-serif;
-	font-size: 70px;
-	display: flex;
-            flex-direction: column; /* Stack text vertically */
-            align-items: center;    
-	line-height: 1.5px;
-	position: absolute;
-	top:0%;
-	left: 43%;
-	text-align: center;
-	
-}
-.but {
-	font-family: 'Common Pixel', sans-serif;
-	font-size: 70px;
-	text-align: center;
-	background-color: fcf083;
-	position: absolute;
-	top: 45%;
-	left:37%;
-	border-radius: 20px;
-	transition: 1.0s;
-}
+<style>
+    body {
+        background-image: url('mobile-back.jpg');
+        background-size: cover; /* Ensures the image covers the entire page */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        overflow-x: hidden; /* Disables horizontal scroll */
+        margin: 0;
+        height: 100vh; /* Full viewport height */
+    }
 
+    .pixel-font {
+        font-family: 'Common Pixel', sans-serif;
+        font-size: 70px;
+        display: flex;
+        flex-direction: column; /* Stack text vertically */
+        align-items: center;
+        line-height: 1.5px;
+        position: absolute;
+        top: 20%; /* Adjusted to give space at the top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Correctly center the text */
+        text-align: center;
+        word-wrap: break-word; /* Ensure text wraps properly on small screens */
+        max-width: 90%; /* Prevents text from overflowing */
+    }
+
+    .but {
+        font-family: 'Common Pixel', sans-serif;
+        font-size: 50px; /* Adjusted size for better fitting */
+        text-align: center;
+        background-color: #fcf083; /* Button color */
+        position: absolute;
+        top: 45%; /* Position below the text */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Correctly center the button */
+        border-radius: 20px;
+        padding: 15px 30px; /* Added padding for button */
+        transition: 1.0s;
+        cursor: pointer;
+    }
+
+    .but:hover {
+        background-color: #ffdd57; /* Change color on hover */
+        transform: scale(1.1); /* Slightly enlarge button on hover */
+    }
+
+    /* Mobile styling adjustments */
+    @media (max-width: 768px) {
+        /* Adjust font size on mobile */
+        .pixel-font {
+            font-size: 30px; /* Smaller font size for mobile */
+            top: 15%; /* Adjust the vertical positioning */
+            max-width: 80%; /* Prevent text from overflowing */
+        }
+
+        /* Change button text color to blue on mobile */
+        .but {
+            font-size: 30px; /* Adjust button size on mobile */
+            background-color: #fcf083; /* Retain original background color */
+            color: blue; /* Button text color turns blue on mobile */
+        }
+    }
 </style>
 
 <button class="but">Check Out?</button>
 <div class="pixel-font">
-<p>Realm</p>
-<p>Of The</p>
-<p>Jungle</p>
+    <p>Realm</p>
+    <p>Of The</p>
+    <p>Jungle</p>
 </div>
